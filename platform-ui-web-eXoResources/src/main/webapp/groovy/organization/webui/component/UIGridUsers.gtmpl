@@ -28,14 +28,14 @@
         yesLabel = _ctx.appRes(name + ".label.yes");
         noLabel = _ctx.appRes(name + ".label.no");
 
-        enableTooltip = _ctx.appRes(name + ".tooltip.enableuser");
-        disableTooltip = _ctx.appRes(name + ".tooltip.disableuser");
+        enableTooltip = _ctx.appRes(name + ".action.title.enableUser");
+        disableTooltip = _ctx.appRes(name + ".action.title.disableUser");
    } else {
         yesLabel = _ctx.appRes(uiParent.getName() + ".label.yes");
         noLabel = _ctx.appRes(uiParent.getName() + ".label.no");
 
-        enableTooltip = _ctx.appRes(uiParent.getName() + ".tooltip.enableuser");
-        disableTooltip = _ctx.appRes(uiParent.getName() + ".tooltip.disableuser");
+        enableTooltip = _ctx.appRes(uiParent.getName() + ".action.title.enableUser");
+        disableTooltip = _ctx.appRes(uiParent.getName() + ".action.title.disableUser");
    }
    def rcontext = _ctx.getRequestContext();
    JavascriptManager jsManager = rcontext.getJavascriptManager();
@@ -122,8 +122,7 @@
                     <div class="center">
                         <%
                         String enableDisableAction = "DisableEnableUser";
-                        String enableDisableTitle = _ctx.appRes(uiParent.getName() + ".action.title." + enableDisableAction);
-                        String enableDisableActionLink = "";
+                        String enableDisableActionLink;
                         if (uiForm != null) {
                             enableDisableActionLink = uiForm.event(enableDisableAction, uiParent.getId(), beanId);
                         } else {
@@ -132,10 +131,8 @@
 
                         String checked = "";
                         if (uicomponent.getFieldValue(bean, "enabled")) {
-                            enableDisableTitle = "Disabled User";
                             checked = "checked=\"checked\"";
                         } else {
-                            enableDisableTitle = "Enabled User";
                         }
                         %>
                         <input type="checkbox" class="yesno" data-yes="yes" data-no="no" onclick="$enableDisableActionLink" $checked />
@@ -161,10 +158,8 @@
                             if (action == "DisableEnableUser") {
                                 if (bean instanceof org.exoplatform.services.organization.impl.UserImpl) {
                                     if (uicomponent.getFieldValue(bean, "enabled")) {
-                                        title = "Disabled User";
                                         classIcon = "uiIconSelectPage uiIconLightGray";
                                     } else {
-                                        title = "Enabled User";
                                         classIcon = "uiIconSelectPage uiIconBlue";
                                     }
                                 }
