@@ -76,23 +76,23 @@
       <tbody class="portlet-table-body">
       <% if (uicomponent.getUIPageIterator().getAvailable() < 1) {%>
           <tr>
-             <td style="font-style:italic; color: #FF5604; text-align: center;" colspan="<%=colnum%>">
+             <td class="empty" colspan="<%=colnum%>">
                 <%=_ctx.appRes("UIGrid.msg.empty")%>
              </td>
           </tr>
       <% } else {
-         def rowStyle = null;
+         def rowStyle = "";
          for (bean in uicomponent.getBeans()) {
             def beanIdField = uicomponent.getBeanIdField();
             def beanId = uicomponent.getBeanIdFor(bean);
-            if (bean instanceof org.exoplatform.services.organization.idm.UserImpl) {
+            if (bean instanceof org.exoplatform.services.organization.impl.UserImpl) {
                 if(!uicomponent.getFieldValue(bean, "enabled")) {
-                    rowStyle = "color: #999999";
+                    rowStyle = "disabled";
                 } else {
-                    rowStyle = null;
+                    rowStyle = "enabled";
                 }
             } %>
-            <tr style="$rowStyle">
+            <tr class="$rowStyle">
             <%
                EntityEncoder encoder = HTMLEntityEncoder.getInstance();
                for (field in beanFields) {
