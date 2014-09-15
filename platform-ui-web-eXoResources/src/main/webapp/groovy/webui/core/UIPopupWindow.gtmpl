@@ -17,12 +17,12 @@
 		title = _ctx.appRes(rsId + ".title."+ org.exoplatform.webui.application.WebuiRequestContext.stripUUIDSuffix(component.getId()));
 	}
 	
-	int width = uicomponent.getWindowWidth();
-	int height = uicomponent.getWindowHeight() - 40;
+	def width = uicomponent.getWindowWidth();
+	def height = uicomponent.getWindowHeight() - 40;
 	def String widthStyle = "";
 	def String heightStyle = "";
 	if(width > 0) widthStyle = "width:" + width + "px;";
-	if(height < 0) height = 0;
+	if(height < 0) height = null;
 	String show = "none";
 	def rcontext = _ctx.getRequestContext();
   def module = rcontext.getJavascriptManager().require("SHARED/uiPopupWindow", "uiPopupWindow");
