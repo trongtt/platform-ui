@@ -56,24 +56,10 @@
 
 // reset font from 481 to 1024
 @media (min-width: 481px) and (max-width: 1024px) {
-    body {
-        font-size: 19.5px;
-        line-height: 30px;
-    }
-    h5 {
-        font-size: 21px;
-    }
-    h6 {
-        font-size: 19.5px;
-    }
+
 
     body {
-        .btn-group > .btn, .btn-group > .dropdown-menu {
-            font-size:19.5px;
-        }
-        .activityStream .heading .dataInfor span, .activityStream .heading .dataInfor a {
-            font-size: 16.5px;
-        }
+
         .accordionBar  {
             padding: 15px 22px!important;
             line-height: 30px!important;
@@ -162,9 +148,15 @@
         .HomeLink > img {
             margin-top: -10px;
         }
-    }   
+    }
+    body .UIToolbarContainer .uiUserToolBarPortlet > a > img {
+       .square(38px);
+    }
+    .action_close {
+        margin-top: -2px!important;
+    }
 }
-
+// end from 481 to 1024px
 
 
 
@@ -172,7 +164,8 @@
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 1024px) and (min-width: 768px) {
-    
+
+
     // Hide Column Timeline when show Right Sidebar
     .open-right-bar {
         .uiActivityStream, .uiActivitiesLoader,
@@ -194,6 +187,7 @@
 @media (min-width: 1025px) {
     html {
         overflow-y: auto!important;
+        height: 100%;
     }
     .website-hompage .uiNavigation .toggle-left-bar {
         display: none;
@@ -590,7 +584,14 @@
         #outerContainer {
             min-width: auto!important;
         }
+
+
+
 }
+
+//end 1024px
+
+
 //hack safari document preview
 
 @media (max-width: 1024px)  and(-webkit-min-device-pixel-ratio:0) {                    
@@ -612,7 +613,7 @@
     body .OfficeRightTDContainer {
         width: 36%!important;
     }
-    
+
 }
 
 
@@ -801,6 +802,7 @@
     .uiPopup .uiIconResize {
         display: none;
     }
+
 }
 
 
@@ -845,6 +847,7 @@
         max-width: 94%;
     }
 }
+
 @media (max-width: 480px) {
     .uiSpaceMenu .spaceMenuTab  span {
         display: none!important;
@@ -958,4 +961,18 @@
     .avatar-help-action a {
         font-weight: bold!important;
     }
+    body .RightBodyTDContainer  {
+        padding-top: 51px;
+    }
+    #UICreateList {
+        [class^="uiIcon"] {
+            font-size: 18px;
+        }
+    }
+
 }
+input, textarea {
+    font-size: initial;
+}
+
+@import "font-responsive.less";
