@@ -1126,7 +1126,9 @@ blockquote:after {
 		z-index: 100;
 	}
 }
-
+.noActivity {
+    margin: 15px 0;
+}
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 1024px) {
@@ -1138,8 +1140,30 @@ blockquote:after {
     .activityStream .arrowLeft {
         display: none;
     }
+    #DisplayModesDropDown .dropdown-menu {
+        left: auto;
+        right: 0;
+        min-width: 164px;
+    }
+    // Hide Column Timeline when show Right Sidebar
+
+    .open-right-bar {
+        .uiActivityStream, .uiActivitiesLoader,
+        .activityStream {
+            background: none;
+        }
+        .activityStream .boxContainer {
+            margin-left: 0;
+        }
+        .activityBottom,
+        .activityTimeLine {
+            display: none!important;
+        }
+    }
 
 }
+
+//end 1024
 
 @media (min-width: 481px) and (max-width: 1024px) {
     .activityStream .author span {
@@ -1207,11 +1231,29 @@ blockquote:after {
     .activityStream .introBox .isPreviewable .mediaContent {
         max-width: 50%;
     }
+    .activityTop .uiDropdownWithIcon a.OptionItem {
+        padding: 12px 15px 12px 15px;
+    }
+    .uiMyConnections .uiTabNormal .nav-tabs > li > a {
+        padding: 10px 15px;
+    }
+}
+
+// end 481 1024
+
+@media (max-width: 768px) {
+    .uiProfileUserSearch {
+        input {
+            display: block;
+            margin: 5px 0;
+            width: 100% !important;
+        }
+    }
+
 }
 
 @media (max-width: 767px ) {
 	body {
-		overflow-y: hidden;
 		height: 100%;
 	}
 	.activityTimeLine.pull-left {
@@ -1477,6 +1519,8 @@ blockquote:after {
         max-width: 30%;
     }
 }
+// end 767
+
 
 
 @media (max-width: 480px) {
@@ -1488,5 +1532,12 @@ blockquote:after {
     .exo-mentions .replaceTextArea {
         max-height: 18px;
         min-height: 18px;
+    }
+    .fileActivity .introBox .isPreviewable .fileTypeContent + .text {
+        overflow: visible;
+    }
+    .uiCalendarActivity .introBox .clearfix .calendarBox + .text,
+    .uiCalendarActivity .introBox .clearfix .statusTask + .text {
+        margin-left: 0; overflow: visible;
     }
 }
