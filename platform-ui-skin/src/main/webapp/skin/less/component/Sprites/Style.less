@@ -26,9 +26,10 @@
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-    * {
+  // removing the font-family cause it disturbs the icons
+/*    * {
         font-family: @sansFontFamily;
-    }
+    }*/
 }
 
 /* Blue icons with optional class, or on hover/active states of certain elements */
@@ -105,6 +106,7 @@ a:hover [class^="uiIcon"],
 
 .uiIconClose {
   .opacity(50);
+  vertical-align: top; // positioning the cross in the close button
   &:hover {
     .opacity(100);
       color: @colorIconDefault!important;
@@ -366,7 +368,7 @@ a:hover [class^="uiIcon"],
 .uiIcon16x16applicationvndms-worddocumentmacroenabled12:before,
 .uiIcon16x16applicationvndms-wordtemplatemacroenabled12:before,
 .uiIcon16x16applicationvndopenxmlformats-officedocumentwordprocessingmltemplate:before {
-	content: "\e712";
+	content: "\e6b1";
 	color: #094D7F;
 }
 
@@ -466,7 +468,7 @@ a:hover [class^="uiIcon"],
 .uiIcon16x16applicationvndms-powerpointtemplatemacroenabled12:before,
 .uiIcon16x16applicationvndms-powerpointslideshowmacroenabled12:before
  {
-	content: "\e703";
+	content: "\e6b0";
 	color: #e45030;
 }
 
@@ -487,7 +489,7 @@ a:hover [class^="uiIcon"],
 .uiIcon16x16applicationvndms-exceltemplatemacroenabled12:before, 
 .uiIcon16x16applicationvndms-exceladdinmacroenabled12:before, 
 .uiIcon16x16applicationvndms-excelsheetbinarymacroenabled12:before{
-	content: "\e6f9";
+	content: "\e6af";
 	color: #1a744b;
 }
 
@@ -697,7 +699,7 @@ a:hover [class^="uiIcon"],
 .uiIcon24x24applicationvndms-worddocumentmacroenabled12:before,
 .uiIcon24x24applicationvndms-wordtemplatemacroenabled12:before,
 .uiIcon24x24applicationvndopenxmlformats-officedocumentwordprocessingmltemplate:before {
-	content: "\e712";
+	content: "\e6b1";
 	color: #094D7F;
 }
 
@@ -797,7 +799,7 @@ a:hover [class^="uiIcon"],
 .uiIcon24x24applicationvndms-powerpointtemplatemacroenabled12:before,
 .uiIcon24x24applicationvndms-powerpointslideshowmacroenabled12:before
  {
-	content: "\e703";
+	content: "\e6b0";
 	color: #e45030;
 }
 
@@ -818,7 +820,7 @@ a:hover [class^="uiIcon"],
 .uiIcon24x24applicationvndms-exceltemplatemacroenabled12:before, 
 .uiIcon24x24applicationvndms-exceladdinmacroenabled12:before, 
 .uiIcon24x24applicationvndms-excelsheetbinarymacroenabled12:before{
-	content: "\e6f9";
+	content: "\e6af";
 	color: #1a744b;
 }
 
@@ -1026,7 +1028,7 @@ a:hover [class^="uiIcon"],
 .uiIcon32x32applicationvndms-worddocumentmacroenabled12:before,
 .uiIcon32x32applicationvndms-wordtemplatemacroenabled12:before,
 .uiIcon32x32applicationvndopenxmlformats-officedocumentwordprocessingmltemplate:before {
-	content: "\e712";
+	content: "\e6b1";
 	color: #094D7F;
 }
 
@@ -1126,7 +1128,7 @@ a:hover [class^="uiIcon"],
 .uiIcon32x32applicationvndms-powerpointtemplatemacroenabled12:before,
 .uiIcon32x32applicationvndms-powerpointslideshowmacroenabled12:before
  {
-	content: "\e703";
+	content: "\e6b0";
 	color: #e45030;
 }
 
@@ -1147,7 +1149,7 @@ a:hover [class^="uiIcon"],
 .uiIcon32x32applicationvndms-exceltemplatemacroenabled12:before, 
 .uiIcon32x32applicationvndms-exceladdinmacroenabled12:before, 
 .uiIcon32x32applicationvndms-excelsheetbinarymacroenabled12:before{
-	content: "\e6f9";
+	content: "\e6af";
 	color: #1a744b;
 }
 
@@ -1356,7 +1358,7 @@ a:hover [class^="uiIcon"],
 .uiIcon48x48applicationvndms-worddocumentmacroenabled12:before,
 .uiIcon48x48applicationvndms-wordtemplatemacroenabled12:before,
 .uiIcon48x48applicationvndopenxmlformats-officedocumentwordprocessingmltemplate:before {
-	content: "\e712";
+	content: "\e6b1";
 	color: #094D7F;
 }
 
@@ -1456,7 +1458,7 @@ a:hover [class^="uiIcon"],
 .uiIcon48x48applicationvndms-powerpointtemplatemacroenabled12:before,
 .uiIcon48x48applicationvndms-powerpointslideshowmacroenabled12:before
  {
-	content: "\e703";
+	content: "\e6b0";
 	color: #e45030;
 }
 
@@ -1477,7 +1479,7 @@ a:hover [class^="uiIcon"],
 .uiIcon48x48applicationvndms-exceltemplatemacroenabled12:before, 
 .uiIcon48x48applicationvndms-exceladdinmacroenabled12:before, 
 .uiIcon48x48applicationvndms-excelsheetbinarymacroenabled12:before{
-	content: "\e6f9";
+	content: "\e6af";
 	color: #1a744b;
 }
 
@@ -1685,7 +1687,7 @@ a:hover [class^="uiIcon"],
 .uiIcon64x64applicationvndms-worddocumentmacroenabled12:before,
 .uiIcon64x64applicationvndms-wordtemplatemacroenabled12:before,
 .uiIcon64x64applicationvndopenxmlformats-officedocumentwordprocessingmltemplate:before {
-	content: "\e712";
+	content: "\e6b1";
 	color: #094D7F;
 }
 
@@ -1785,7 +1787,7 @@ a:hover [class^="uiIcon"],
 .uiIcon64x64applicationvndms-powerpointtemplatemacroenabled12:before,
 .uiIcon64x64applicationvndms-powerpointslideshowmacroenabled12:before
  {
-	content: "\e703";
+	content: "\e6b0";
 	color: #e45030;
 }
 
@@ -1806,7 +1808,7 @@ a:hover [class^="uiIcon"],
 .uiIcon64x64applicationvndms-exceltemplatemacroenabled12:before, 
 .uiIcon64x64applicationvndms-exceladdinmacroenabled12:before, 
 .uiIcon64x64applicationvndms-excelsheetbinarymacroenabled12:before{
-	content: "\e6f9";
+	content: "\e6af";
 	color: #1a744b;
 }
 
