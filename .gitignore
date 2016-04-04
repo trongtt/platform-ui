@@ -16,10 +16,10 @@
 *.sar
 *.class
 
-# Maven 
+# Maven
 target/
 
-# IntelliJ project files 
+# IntelliJ project files
 *.iml
 *.iws
 *.ipr
@@ -38,3 +38,4 @@ target/
 release.properties
 pom.xml.releaseBackup
 pom.xml.tag
+pom.xml.versionsBackup
