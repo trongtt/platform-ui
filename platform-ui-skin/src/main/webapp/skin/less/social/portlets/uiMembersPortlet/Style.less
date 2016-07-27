@@ -1,9 +1,21 @@
 @import "../../../variables.less"; 
 @import "../../../mixins.less";
 
-.uiMembersPortlet .spaceMemberListBox {
-    background-color: @baseBackground;
-    border: 1px solid @borderColor;
-    border-radius: 4px;
-    padding: 10px;
+.uiMembersPortlet {
+	.spaceMemberListBox {
+	    background-color: @baseBackground;
+	    border: 1px solid @borderColor;
+	    border-radius: 4px;
+	    padding: 10px;
+	}
+
+	#NotifyAnchor {
+		text-align: center;
+		height: 0px;
+	}
+
+	.UINotify {
+		display: inline-block;
+		padding: 8px 12px;
+	}
 }
